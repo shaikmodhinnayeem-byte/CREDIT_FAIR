@@ -1,0 +1,2629 @@
+{
+  "total_rows": 1238434,
+  "total_columns": 25,
+  "numerical_columns_count": 17,
+  "categorical_columns_count": 8,
+  "numerical_columns": [
+    "loan_amnt",
+    "term_months",
+    "int_rate",
+    "installment",
+    "emp_length_years",
+    "annual_inc",
+    "dti",
+    "fico_range_low",
+    "fico_range_high",
+    "fico_score",
+    "open_acc",
+    "pub_rec",
+    "revol_bal",
+    "revol_util",
+    "total_acc",
+    "mort_acc",
+    "pub_rec_bankruptcies"
+  ],
+  "categorical_columns": [
+    "term",
+    "emp_length",
+    "home_ownership",
+    "income_bracket",
+    "verification_status",
+    "purpose",
+    "addr_state",
+    "loan_status"
+  ],
+  "target_col": "loan_status",
+  "target_distribution": {
+    "counts": {
+      "Fully Paid": 994890,
+      "Charged Off": 243544
+    },
+    "percentages": {
+      "Fully Paid": 80.33,
+      "Charged Off": 19.67
+    }
+  },
+  "features": {
+    "loan_amnt": {
+      "name": "loan_amnt",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 1545,
+      "stats": {
+        "mean": 14442.06,
+        "std": 8666.4,
+        "median": 12000.0,
+        "min": 500.0,
+        "max": 40000.0,
+        "q25": 8000.0,
+        "q75": 20000.0,
+        "iqr": 12000.0,
+        "lower_fence": -10000.0,
+        "upper_fence": 38000.0,
+        "outlier_count": 5500,
+        "outlier_pct": 0.44,
+        "corr_with_default": 0.0642
+      },
+      "histogram": [
+        {
+          "bin_start": 500.0,
+          "bin_end": 3791.67,
+          "count": 76575,
+          "pct": 6.18
+        },
+        {
+          "bin_start": 3791.67,
+          "bin_end": 7083.33,
+          "count": 198464,
+          "pct": 16.03
+        },
+        {
+          "bin_start": 7083.33,
+          "bin_end": 10375.0,
+          "count": 237429,
+          "pct": 19.17
+        },
+        {
+          "bin_start": 10375.0,
+          "bin_end": 13666.67,
+          "count": 152915,
+          "pct": 12.35
+        },
+        {
+          "bin_start": 13666.67,
+          "bin_end": 16958.33,
+          "count": 163872,
+          "pct": 13.23
+        },
+        {
+          "bin_start": 16958.33,
+          "bin_end": 20250.0,
+          "count": 141675,
+          "pct": 11.44
+        },
+        {
+          "bin_start": 20250.0,
+          "bin_end": 23541.67,
+          "count": 51774,
+          "pct": 4.18
+        },
+        {
+          "bin_start": 23541.67,
+          "bin_end": 26833.33,
+          "count": 81828,
+          "pct": 6.61
+        },
+        {
+          "bin_start": 26833.33,
+          "bin_end": 30125.0,
+          "count": 60473,
+          "pct": 4.88
+        },
+        {
+          "bin_start": 30125.0,
+          "bin_end": 33416.67,
+          "count": 14485,
+          "pct": 1.17
+        },
+        {
+          "bin_start": 33416.67,
+          "bin_end": 36708.33,
+          "count": 53087,
+          "pct": 4.29
+        },
+        {
+          "bin_start": 36708.33,
+          "bin_end": 40000.0,
+          "count": 5857,
+          "pct": 0.47
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 14166.61,
+          "median": 12000.0,
+          "std": 8624.18
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 15567.31,
+          "median": 14400.0,
+          "std": 8747.14
+        }
+      }
+    },
+    "term": {
+      "name": "term",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 2,
+      "stats": {
+        "top_value": "36 months",
+        "top_count": 939073,
+        "top_pct": 75.83,
+        "unique_categories": 2
+      },
+      "categories": [
+        {
+          "category": "36 months",
+          "count": 939073,
+          "pct": 75.83
+        },
+        {
+          "category": "60 months",
+          "count": 299361,
+          "pct": 24.17
+        }
+      ],
+      "target_breakdown": {
+        "36 months": {
+          "fully_paid": 792567,
+          "charged_off": 146506,
+          "default_rate_pct": 15.6
+        },
+        "60 months": {
+          "fully_paid": 202323,
+          "charged_off": 97038,
+          "default_rate_pct": 32.42
+        }
+      }
+    },
+    "term_months": {
+      "name": "term_months",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 2,
+      "stats": {
+        "mean": 41.8,
+        "std": 10.28,
+        "median": 36.0,
+        "min": 36.0,
+        "max": 60.0,
+        "q25": 36.0,
+        "q75": 36.0,
+        "iqr": 0.0,
+        "lower_fence": 36.0,
+        "upper_fence": 36.0,
+        "outlier_count": 299361,
+        "outlier_pct": 24.17,
+        "corr_with_default": 0.1811
+      },
+      "histogram": [
+        {
+          "bin_start": 36.0,
+          "bin_end": 38.0,
+          "count": 939073,
+          "pct": 75.83
+        },
+        {
+          "bin_start": 38.0,
+          "bin_end": 40.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 40.0,
+          "bin_end": 42.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 42.0,
+          "bin_end": 44.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 44.0,
+          "bin_end": 46.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 46.0,
+          "bin_end": 48.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 48.0,
+          "bin_end": 50.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 50.0,
+          "bin_end": 52.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 52.0,
+          "bin_end": 54.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 54.0,
+          "bin_end": 56.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 56.0,
+          "bin_end": 58.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 58.0,
+          "bin_end": 60.0,
+          "count": 299361,
+          "pct": 24.17
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 40.88,
+          "median": 36.0,
+          "std": 9.66
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 45.56,
+          "median": 36.0,
+          "std": 11.75
+        }
+      }
+    },
+    "int_rate": {
+      "name": "int_rate",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 654,
+      "stats": {
+        "mean": 13.19,
+        "std": 4.72,
+        "median": 12.74,
+        "min": 5.31,
+        "max": 30.99,
+        "q25": 9.71,
+        "q75": 15.99,
+        "iqr": 6.28,
+        "lower_fence": 0.29,
+        "upper_fence": 25.41,
+        "outlier_count": 20566,
+        "outlier_pct": 1.66,
+        "corr_with_default": 0.2587
+      },
+      "histogram": [
+        {
+          "bin_start": 5.31,
+          "bin_end": 7.45,
+          "count": 126388,
+          "pct": 10.21
+        },
+        {
+          "bin_start": 7.45,
+          "bin_end": 9.59,
+          "count": 177267,
+          "pct": 14.31
+        },
+        {
+          "bin_start": 9.59,
+          "bin_end": 11.73,
+          "count": 207645,
+          "pct": 16.77
+        },
+        {
+          "bin_start": 11.73,
+          "bin_end": 13.87,
+          "count": 226794,
+          "pct": 18.31
+        },
+        {
+          "bin_start": 13.87,
+          "bin_end": 16.01,
+          "count": 194203,
+          "pct": 15.68
+        },
+        {
+          "bin_start": 16.01,
+          "bin_end": 18.15,
+          "count": 123353,
+          "pct": 9.96
+        },
+        {
+          "bin_start": 18.15,
+          "bin_end": 20.29,
+          "count": 90440,
+          "pct": 7.3
+        },
+        {
+          "bin_start": 20.29,
+          "bin_end": 22.43,
+          "count": 38340,
+          "pct": 3.1
+        },
+        {
+          "bin_start": 22.43,
+          "bin_end": 24.57,
+          "count": 26323,
+          "pct": 2.13
+        },
+        {
+          "bin_start": 24.57,
+          "bin_end": 26.71,
+          "count": 17813,
+          "pct": 1.44
+        },
+        {
+          "bin_start": 26.71,
+          "bin_end": 28.85,
+          "count": 4681,
+          "pct": 0.38
+        },
+        {
+          "bin_start": 28.85,
+          "bin_end": 30.99,
+          "count": 5187,
+          "pct": 0.42
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 12.58,
+          "median": 12.13,
+          "std": 4.49
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 15.65,
+          "median": 15.05,
+          "std": 4.83
+        }
+      }
+    },
+    "installment": {
+      "name": "installment",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 81314,
+      "stats": {
+        "mean": 438.21,
+        "std": 259.44,
+        "median": 375.88,
+        "min": 4.93,
+        "max": 1719.83,
+        "q25": 250.15,
+        "q75": 580.22,
+        "iqr": 330.07,
+        "lower_fence": -244.96,
+        "upper_fence": 1075.33,
+        "outlier_count": 38082,
+        "outlier_pct": 3.08,
+        "corr_with_default": 0.048
+      },
+      "histogram": [
+        {
+          "bin_start": 4.93,
+          "bin_end": 147.84,
+          "count": 103060,
+          "pct": 8.32
+        },
+        {
+          "bin_start": 147.84,
+          "bin_end": 290.75,
+          "count": 304255,
+          "pct": 24.57
+        },
+        {
+          "bin_start": 290.75,
+          "bin_end": 433.66,
+          "count": 310261,
+          "pct": 25.05
+        },
+        {
+          "bin_start": 433.66,
+          "bin_end": 576.56,
+          "count": 207490,
+          "pct": 16.75
+        },
+        {
+          "bin_start": 576.56,
+          "bin_end": 719.47,
+          "count": 134949,
+          "pct": 10.9
+        },
+        {
+          "bin_start": 719.47,
+          "bin_end": 862.38,
+          "count": 82429,
+          "pct": 6.66
+        },
+        {
+          "bin_start": 862.38,
+          "bin_end": 1005.29,
+          "count": 46238,
+          "pct": 3.73
+        },
+        {
+          "bin_start": 1005.29,
+          "bin_end": 1148.2,
+          "count": 25197,
+          "pct": 2.03
+        },
+        {
+          "bin_start": 1148.2,
+          "bin_end": 1291.11,
+          "count": 20960,
+          "pct": 1.69
+        },
+        {
+          "bin_start": 1291.11,
+          "bin_end": 1434.01,
+          "count": 3270,
+          "pct": 0.26
+        },
+        {
+          "bin_start": 1434.01,
+          "bin_end": 1576.92,
+          "count": 304,
+          "pct": 0.02
+        },
+        {
+          "bin_start": 1576.92,
+          "bin_end": 1719.83,
+          "count": 21,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 432.05,
+          "median": 369.93,
+          "std": 259.13
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 463.4,
+          "median": 402.69,
+          "std": 259.19
+        }
+      }
+    },
+    "emp_length": {
+      "name": "emp_length",
+      "type": "Categorical",
+      "missing_count": 71128,
+      "missing_pct": 5.74,
+      "valid_count": 1167306,
+      "cardinality": 11,
+      "stats": {
+        "top_value": "10+ years",
+        "top_count": 406478,
+        "top_pct": 34.82,
+        "unique_categories": 11
+      },
+      "categories": [
+        {
+          "category": "10+ years",
+          "count": 406478,
+          "pct": 34.82
+        },
+        {
+          "category": "2 years",
+          "count": 111815,
+          "pct": 9.58
+        },
+        {
+          "category": "3 years",
+          "count": 99003,
+          "pct": 8.48
+        },
+        {
+          "category": "< 1 year",
+          "count": 98969,
+          "pct": 8.48
+        },
+        {
+          "category": "1 year",
+          "count": 81350,
+          "pct": 6.97
+        },
+        {
+          "category": "5 years",
+          "count": 77584,
+          "pct": 6.65
+        },
+        {
+          "category": "4 years",
+          "count": 74154,
+          "pct": 6.35
+        },
+        {
+          "category": "6 years",
+          "count": 57914,
+          "pct": 4.96
+        },
+        {
+          "category": "8 years",
+          "count": 56906,
+          "pct": 4.87
+        },
+        {
+          "category": "7 years",
+          "count": 56054,
+          "pct": 4.8
+        },
+        {
+          "category": "9 years",
+          "count": 47079,
+          "pct": 4.03
+        }
+      ],
+      "target_breakdown": {
+        "10+ years": {
+          "fully_paid": 331057,
+          "charged_off": 75421,
+          "default_rate_pct": 18.55
+        },
+        "2 years": {
+          "fully_paid": 90044,
+          "charged_off": 21771,
+          "default_rate_pct": 19.47
+        },
+        "3 years": {
+          "fully_paid": 79506,
+          "charged_off": 19497,
+          "default_rate_pct": 19.69
+        },
+        "< 1 year": {
+          "fully_paid": 79097,
+          "charged_off": 19872,
+          "default_rate_pct": 20.08
+        },
+        "1 year": {
+          "fully_paid": 64872,
+          "charged_off": 16478,
+          "default_rate_pct": 20.26
+        },
+        "5 years": {
+          "fully_paid": 62666,
+          "charged_off": 14918,
+          "default_rate_pct": 19.23
+        },
+        "4 years": {
+          "fully_paid": 59721,
+          "charged_off": 14433,
+          "default_rate_pct": 19.46
+        },
+        "6 years": {
+          "fully_paid": 46858,
+          "charged_off": 11056,
+          "default_rate_pct": 19.09
+        },
+        "8 years": {
+          "fully_paid": 45684,
+          "charged_off": 11222,
+          "default_rate_pct": 19.72
+        },
+        "7 years": {
+          "fully_paid": 45201,
+          "charged_off": 10853,
+          "default_rate_pct": 19.36
+        },
+        "9 years": {
+          "fully_paid": 37792,
+          "charged_off": 9287,
+          "default_rate_pct": 19.73
+        }
+      }
+    },
+    "emp_length_years": {
+      "name": "emp_length_years",
+      "type": "Numeric",
+      "missing_count": 71128,
+      "missing_pct": 5.74,
+      "valid_count": 1167306,
+      "cardinality": 11,
+      "stats": {
+        "mean": 5.97,
+        "std": 3.69,
+        "median": 6.0,
+        "min": 0.0,
+        "max": 10.0,
+        "q25": 2.0,
+        "q75": 10.0,
+        "iqr": 8.0,
+        "lower_fence": -10.0,
+        "upper_fence": 22.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0,
+        "corr_with_default": -0.0128
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 0.83,
+          "count": 98969,
+          "pct": 8.48
+        },
+        {
+          "bin_start": 0.83,
+          "bin_end": 1.67,
+          "count": 81350,
+          "pct": 6.97
+        },
+        {
+          "bin_start": 1.67,
+          "bin_end": 2.5,
+          "count": 111815,
+          "pct": 9.58
+        },
+        {
+          "bin_start": 2.5,
+          "bin_end": 3.33,
+          "count": 99003,
+          "pct": 8.48
+        },
+        {
+          "bin_start": 3.33,
+          "bin_end": 4.17,
+          "count": 74154,
+          "pct": 6.35
+        },
+        {
+          "bin_start": 4.17,
+          "bin_end": 5.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 5.0,
+          "bin_end": 5.83,
+          "count": 77584,
+          "pct": 6.65
+        },
+        {
+          "bin_start": 5.83,
+          "bin_end": 6.67,
+          "count": 57914,
+          "pct": 4.96
+        },
+        {
+          "bin_start": 6.67,
+          "bin_end": 7.5,
+          "count": 56054,
+          "pct": 4.8
+        },
+        {
+          "bin_start": 7.5,
+          "bin_end": 8.33,
+          "count": 56906,
+          "pct": 4.87
+        },
+        {
+          "bin_start": 8.33,
+          "bin_end": 9.17,
+          "count": 47079,
+          "pct": 4.03
+        },
+        {
+          "bin_start": 9.17,
+          "bin_end": 10.0,
+          "count": 406478,
+          "pct": 34.82
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 942498,
+          "mean": 5.99,
+          "median": 6.0,
+          "std": 3.68
+        },
+        "Charged Off": {
+          "count": 224808,
+          "mean": 5.87,
+          "median": 6.0,
+          "std": 3.69
+        }
+      }
+    },
+    "home_ownership": {
+      "name": "home_ownership",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 4,
+      "stats": {
+        "top_value": "MORTGAGE",
+        "top_count": 612714,
+        "top_pct": 49.47,
+        "unique_categories": 4
+      },
+      "categories": [
+        {
+          "category": "MORTGAGE",
+          "count": 612714,
+          "pct": 49.47
+        },
+        {
+          "category": "RENT",
+          "count": 493552,
+          "pct": 39.85
+        },
+        {
+          "category": "OWN",
+          "count": 131749,
+          "pct": 10.64
+        },
+        {
+          "category": "OTHER",
+          "count": 419,
+          "pct": 0.03
+        }
+      ],
+      "target_breakdown": {
+        "MORTGAGE": {
+          "fully_paid": 508564,
+          "charged_off": 104150,
+          "default_rate_pct": 17.0
+        },
+        "RENT": {
+          "fully_paid": 380952,
+          "charged_off": 112600,
+          "default_rate_pct": 22.81
+        },
+        "OWN": {
+          "fully_paid": 105030,
+          "charged_off": 26719,
+          "default_rate_pct": 20.28
+        },
+        "OTHER": {
+          "fully_paid": 344,
+          "charged_off": 75,
+          "default_rate_pct": 17.9
+        }
+      }
+    },
+    "annual_inc": {
+      "name": "annual_inc",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 61335,
+      "stats": {
+        "mean": 76027.8,
+        "std": 68816.07,
+        "median": 65000.0,
+        "min": 0.0,
+        "max": 10999200.0,
+        "q25": 45500.0,
+        "q75": 90000.0,
+        "iqr": 44500.0,
+        "lower_fence": -21250.0,
+        "upper_fence": 156750.0,
+        "outlier_count": 59979,
+        "outlier_pct": 4.84,
+        "corr_with_default": -0.0422
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 916600.0,
+          "count": 1238065,
+          "pct": 99.97
+        },
+        {
+          "bin_start": 916600.0,
+          "bin_end": 1833200.0,
+          "count": 274,
+          "pct": 0.02
+        },
+        {
+          "bin_start": 1833200.0,
+          "bin_end": 2749800.0,
+          "count": 28,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 2749800.0,
+          "bin_end": 3666400.0,
+          "count": 15,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 3666400.0,
+          "bin_end": 4583000.0,
+          "count": 11,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 4583000.0,
+          "bin_end": 5499600.0,
+          "count": 10,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 5499600.0,
+          "bin_end": 6416200.0,
+          "count": 7,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 6416200.0,
+          "bin_end": 7332800.0,
+          "count": 6,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 7332800.0,
+          "bin_end": 8249400.0,
+          "count": 4,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 8249400.0,
+          "bin_end": 9166000.0,
+          "count": 8,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 9166000.0,
+          "bin_end": 10082600.0,
+          "count": 5,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 10082600.0,
+          "bin_end": 10999200.0,
+          "count": 1,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 77465.88,
+          "median": 65000.0,
+          "std": 69481.52
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 70153.13,
+          "median": 60000.0,
+          "std": 65702.1
+        }
+      }
+    },
+    "income_bracket": {
+      "name": "income_bracket",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 4,
+      "stats": {
+        "top_value": "Lower-Mid",
+        "top_count": 335186,
+        "top_pct": 27.07,
+        "unique_categories": 4
+      },
+      "categories": [
+        {
+          "category": "Lower-Mid",
+          "count": 335186,
+          "pct": 27.07
+        },
+        {
+          "category": "Low",
+          "count": 309954,
+          "pct": 25.03
+        },
+        {
+          "category": "High",
+          "count": 305881,
+          "pct": 24.7
+        },
+        {
+          "category": "Upper-Mid",
+          "count": 287413,
+          "pct": 23.21
+        }
+      ],
+      "target_breakdown": {
+        "Lower-Mid": {
+          "fully_paid": 265139,
+          "charged_off": 70047,
+          "default_rate_pct": 20.9
+        },
+        "Low": {
+          "fully_paid": 238912,
+          "charged_off": 71042,
+          "default_rate_pct": 22.92
+        },
+        "High": {
+          "fully_paid": 257480,
+          "charged_off": 48401,
+          "default_rate_pct": 15.82
+        },
+        "Upper-Mid": {
+          "fully_paid": 233359,
+          "charged_off": 54054,
+          "default_rate_pct": 18.81
+        }
+      }
+    },
+    "verification_status": {
+      "name": "verification_status",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 3,
+      "stats": {
+        "top_value": "Source Verified",
+        "top_count": 478586,
+        "top_pct": 38.64,
+        "unique_categories": 3
+      },
+      "categories": [
+        {
+          "category": "Source Verified",
+          "count": 478586,
+          "pct": 38.64
+        },
+        {
+          "category": "Verified",
+          "count": 386916,
+          "pct": 31.24
+        },
+        {
+          "category": "Not Verified",
+          "count": 372932,
+          "pct": 30.11
+        }
+      ],
+      "target_breakdown": {
+        "Source Verified": {
+          "fully_paid": 379355,
+          "charged_off": 99231,
+          "default_rate_pct": 20.73
+        },
+        "Verified": {
+          "fully_paid": 296435,
+          "charged_off": 90481,
+          "default_rate_pct": 23.39
+        },
+        "Not Verified": {
+          "fully_paid": 319100,
+          "charged_off": 53832,
+          "default_rate_pct": 14.43
+        }
+      }
+    },
+    "purpose": {
+      "name": "purpose",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 14,
+      "stats": {
+        "top_value": "debt_consolidation",
+        "top_count": 719198,
+        "top_pct": 58.07,
+        "unique_categories": 14
+      },
+      "categories": [
+        {
+          "category": "debt_consolidation",
+          "count": 719198,
+          "pct": 58.07
+        },
+        {
+          "category": "credit_card",
+          "count": 275332,
+          "pct": 22.23
+        },
+        {
+          "category": "home_improvement",
+          "count": 79675,
+          "pct": 6.43
+        },
+        {
+          "category": "other",
+          "count": 69400,
+          "pct": 5.6
+        },
+        {
+          "category": "major_purchase",
+          "count": 26729,
+          "pct": 2.16
+        },
+        {
+          "category": "small_business",
+          "count": 14215,
+          "pct": 1.15
+        },
+        {
+          "category": "medical",
+          "count": 13925,
+          "pct": 1.12
+        },
+        {
+          "category": "car",
+          "count": 13365,
+          "pct": 1.08
+        },
+        {
+          "category": "moving",
+          "count": 8621,
+          "pct": 0.7
+        },
+        {
+          "category": "vacation",
+          "count": 8148,
+          "pct": 0.66
+        },
+        {
+          "category": "house",
+          "count": 6370,
+          "pct": 0.51
+        },
+        {
+          "category": "wedding",
+          "count": 2293,
+          "pct": 0.19
+        },
+        {
+          "category": "renewable_energy",
+          "count": 837,
+          "pct": 0.07
+        },
+        {
+          "category": "educational",
+          "count": 326,
+          "pct": 0.03
+        }
+      ],
+      "target_breakdown": {
+        "debt_consolidation": {
+          "fully_paid": 569045,
+          "charged_off": 150153,
+          "default_rate_pct": 20.88
+        },
+        "credit_card": {
+          "fully_paid": 229510,
+          "charged_off": 45822,
+          "default_rate_pct": 16.64
+        },
+        "home_improvement": {
+          "fully_paid": 65787,
+          "charged_off": 13888,
+          "default_rate_pct": 17.43
+        },
+        "other": {
+          "fully_paid": 55009,
+          "charged_off": 14391,
+          "default_rate_pct": 20.74
+        },
+        "major_purchase": {
+          "fully_paid": 21924,
+          "charged_off": 4805,
+          "default_rate_pct": 17.98
+        },
+        "small_business": {
+          "fully_paid": 10092,
+          "charged_off": 4123,
+          "default_rate_pct": 29.0
+        },
+        "medical": {
+          "fully_paid": 10929,
+          "charged_off": 2996,
+          "default_rate_pct": 21.52
+        },
+        "car": {
+          "fully_paid": 11437,
+          "charged_off": 1928,
+          "default_rate_pct": 14.43
+        },
+        "moving": {
+          "fully_paid": 6625,
+          "charged_off": 1996,
+          "default_rate_pct": 23.15
+        },
+        "vacation": {
+          "fully_paid": 6600,
+          "charged_off": 1548,
+          "default_rate_pct": 19.0
+        },
+        "house": {
+          "fully_paid": 5003,
+          "charged_off": 1367,
+          "default_rate_pct": 21.46
+        },
+        "wedding": {
+          "fully_paid": 2014,
+          "charged_off": 279,
+          "default_rate_pct": 12.17
+        },
+        "renewable_energy": {
+          "fully_paid": 645,
+          "charged_off": 192,
+          "default_rate_pct": 22.94
+        },
+        "educational": {
+          "fully_paid": 270,
+          "charged_off": 56,
+          "default_rate_pct": 17.18
+        }
+      }
+    },
+    "addr_state": {
+      "name": "addr_state",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 51,
+      "stats": {
+        "top_value": "CA",
+        "top_count": 181354,
+        "top_pct": 14.64,
+        "unique_categories": 51
+      },
+      "categories": [
+        {
+          "category": "CA",
+          "count": 181354,
+          "pct": 14.64
+        },
+        {
+          "category": "NY",
+          "count": 101654,
+          "pct": 8.21
+        },
+        {
+          "category": "TX",
+          "count": 101097,
+          "pct": 8.16
+        },
+        {
+          "category": "FL",
+          "count": 87466,
+          "pct": 7.06
+        },
+        {
+          "category": "IL",
+          "count": 47842,
+          "pct": 3.86
+        },
+        {
+          "category": "NJ",
+          "count": 44880,
+          "pct": 3.62
+        },
+        {
+          "category": "PA",
+          "count": 42038,
+          "pct": 3.39
+        },
+        {
+          "category": "OH",
+          "count": 40437,
+          "pct": 3.27
+        },
+        {
+          "category": "GA",
+          "count": 39944,
+          "pct": 3.23
+        },
+        {
+          "category": "VA",
+          "count": 35377,
+          "pct": 2.86
+        },
+        {
+          "category": "NC",
+          "count": 34716,
+          "pct": 2.8
+        },
+        {
+          "category": "MI",
+          "count": 32292,
+          "pct": 2.61
+        },
+        {
+          "category": "AZ",
+          "count": 29801,
+          "pct": 2.41
+        },
+        {
+          "category": "MD",
+          "count": 28795,
+          "pct": 2.33
+        },
+        {
+          "category": "MA",
+          "count": 28594,
+          "pct": 2.31
+        }
+      ],
+      "target_breakdown": {
+        "CA": {
+          "fully_paid": 146451,
+          "charged_off": 34903,
+          "default_rate_pct": 19.25
+        },
+        "NY": {
+          "fully_paid": 79563,
+          "charged_off": 22091,
+          "default_rate_pct": 21.73
+        },
+        "TX": {
+          "fully_paid": 81444,
+          "charged_off": 19653,
+          "default_rate_pct": 19.44
+        },
+        "FL": {
+          "fully_paid": 68988,
+          "charged_off": 18478,
+          "default_rate_pct": 21.13
+        },
+        "IL": {
+          "fully_paid": 39298,
+          "charged_off": 8544,
+          "default_rate_pct": 17.86
+        },
+        "NJ": {
+          "fully_paid": 35576,
+          "charged_off": 9304,
+          "default_rate_pct": 20.73
+        },
+        "PA": {
+          "fully_paid": 33399,
+          "charged_off": 8639,
+          "default_rate_pct": 20.55
+        },
+        "OH": {
+          "fully_paid": 32232,
+          "charged_off": 8205,
+          "default_rate_pct": 20.29
+        },
+        "GA": {
+          "fully_paid": 32742,
+          "charged_off": 7202,
+          "default_rate_pct": 18.03
+        },
+        "VA": {
+          "fully_paid": 28443,
+          "charged_off": 6934,
+          "default_rate_pct": 19.6
+        },
+        "NC": {
+          "fully_paid": 27577,
+          "charged_off": 7139,
+          "default_rate_pct": 20.56
+        },
+        "MI": {
+          "fully_paid": 25838,
+          "charged_off": 6454,
+          "default_rate_pct": 19.99
+        },
+        "AZ": {
+          "fully_paid": 24033,
+          "charged_off": 5768,
+          "default_rate_pct": 19.36
+        },
+        "MD": {
+          "fully_paid": 22756,
+          "charged_off": 6039,
+          "default_rate_pct": 20.97
+        },
+        "MA": {
+          "fully_paid": 23250,
+          "charged_off": 5344,
+          "default_rate_pct": 18.69
+        }
+      }
+    },
+    "dti": {
+      "name": "dti",
+      "type": "Numeric",
+      "missing_count": 293,
+      "missing_pct": 0.02,
+      "valid_count": 1238141,
+      "cardinality": 6633,
+      "stats": {
+        "mean": 18.25,
+        "std": 10.68,
+        "median": 17.6,
+        "min": -1.0,
+        "max": 999.0,
+        "q25": 11.79,
+        "q75": 24.03,
+        "iqr": 12.24,
+        "lower_fence": -6.57,
+        "upper_fence": 42.39,
+        "outlier_count": 4448,
+        "outlier_pct": 0.36,
+        "corr_with_default": 0.0877
+      },
+      "histogram": [
+        {
+          "bin_start": -1.0,
+          "bin_end": 82.33,
+          "count": 1237550,
+          "pct": 99.95
+        },
+        {
+          "bin_start": 82.33,
+          "bin_end": 165.67,
+          "count": 401,
+          "pct": 0.03
+        },
+        {
+          "bin_start": 165.67,
+          "bin_end": 249.0,
+          "count": 87,
+          "pct": 0.01
+        },
+        {
+          "bin_start": 249.0,
+          "bin_end": 332.33,
+          "count": 33,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 332.33,
+          "bin_end": 415.67,
+          "count": 9,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 415.67,
+          "bin_end": 499.0,
+          "count": 9,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 499.0,
+          "bin_end": 582.33,
+          "count": 5,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 582.33,
+          "bin_end": 665.67,
+          "count": 5,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 665.67,
+          "bin_end": 749.0,
+          "count": 5,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 749.0,
+          "bin_end": 832.33,
+          "count": 5,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 832.33,
+          "bin_end": 915.67,
+          "count": 2,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 915.67,
+          "bin_end": 999.0,
+          "count": 30,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994650,
+          "mean": 17.78,
+          "median": 17.09,
+          "std": 10.63
+        },
+        "Charged Off": {
+          "count": 243491,
+          "mean": 20.14,
+          "median": 19.76,
+          "std": 10.67
+        }
+      }
+    },
+    "fico_range_low": {
+      "name": "fico_range_low",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 40,
+      "stats": {
+        "mean": 695.99,
+        "std": 31.68,
+        "median": 690.0,
+        "min": 625.0,
+        "max": 845.0,
+        "q25": 670.0,
+        "q75": 710.0,
+        "iqr": 40.0,
+        "lower_fence": 610.0,
+        "upper_fence": 770.0,
+        "outlier_count": 41786,
+        "outlier_pct": 3.37,
+        "corr_with_default": -0.1309
+      },
+      "histogram": [
+        {
+          "bin_start": 625.0,
+          "bin_end": 643.33,
+          "count": 2,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 643.33,
+          "bin_end": 661.67,
+          "count": 111445,
+          "pct": 9.0
+        },
+        {
+          "bin_start": 661.67,
+          "bin_end": 680.0,
+          "count": 312910,
+          "pct": 25.27
+        },
+        {
+          "bin_start": 680.0,
+          "bin_end": 698.33,
+          "count": 334231,
+          "pct": 26.99
+        },
+        {
+          "bin_start": 698.33,
+          "bin_end": 716.67,
+          "count": 226487,
+          "pct": 18.29
+        },
+        {
+          "bin_start": 716.67,
+          "bin_end": 735.0,
+          "count": 99722,
+          "pct": 8.05
+        },
+        {
+          "bin_start": 735.0,
+          "bin_end": 753.33,
+          "count": 71798,
+          "pct": 5.8
+        },
+        {
+          "bin_start": 753.33,
+          "bin_end": 771.67,
+          "count": 40053,
+          "pct": 3.23
+        },
+        {
+          "bin_start": 771.67,
+          "bin_end": 790.0,
+          "count": 19188,
+          "pct": 1.55
+        },
+        {
+          "bin_start": 790.0,
+          "bin_end": 808.33,
+          "count": 15224,
+          "pct": 1.23
+        },
+        {
+          "bin_start": 808.33,
+          "bin_end": 826.67,
+          "count": 6030,
+          "pct": 0.49
+        },
+        {
+          "bin_start": 826.67,
+          "bin_end": 845.0,
+          "count": 1344,
+          "pct": 0.11
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 698.04,
+          "median": 690.0,
+          "std": 32.65
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 687.61,
+          "median": 680.0,
+          "std": 25.69
+        }
+      }
+    },
+    "fico_range_high": {
+      "name": "fico_range_high",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 40,
+      "stats": {
+        "mean": 699.99,
+        "std": 31.68,
+        "median": 694.0,
+        "min": 629.0,
+        "max": 850.0,
+        "q25": 674.0,
+        "q75": 714.0,
+        "iqr": 40.0,
+        "lower_fence": 614.0,
+        "upper_fence": 774.0,
+        "outlier_count": 41786,
+        "outlier_pct": 3.37,
+        "corr_with_default": -0.1309
+      },
+      "histogram": [
+        {
+          "bin_start": 629.0,
+          "bin_end": 647.42,
+          "count": 2,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 647.42,
+          "bin_end": 665.83,
+          "count": 111445,
+          "pct": 9.0
+        },
+        {
+          "bin_start": 665.83,
+          "bin_end": 684.25,
+          "count": 408462,
+          "pct": 32.98
+        },
+        {
+          "bin_start": 684.25,
+          "bin_end": 702.67,
+          "count": 238679,
+          "pct": 19.27
+        },
+        {
+          "bin_start": 702.67,
+          "bin_end": 721.08,
+          "count": 226487,
+          "pct": 18.29
+        },
+        {
+          "bin_start": 721.08,
+          "bin_end": 739.5,
+          "count": 121717,
+          "pct": 9.83
+        },
+        {
+          "bin_start": 739.5,
+          "bin_end": 757.92,
+          "count": 49803,
+          "pct": 4.02
+        },
+        {
+          "bin_start": 757.92,
+          "bin_end": 776.33,
+          "count": 40053,
+          "pct": 3.23
+        },
+        {
+          "bin_start": 776.33,
+          "bin_end": 794.75,
+          "count": 24071,
+          "pct": 1.94
+        },
+        {
+          "bin_start": 794.75,
+          "bin_end": 813.17,
+          "count": 10341,
+          "pct": 0.84
+        },
+        {
+          "bin_start": 813.17,
+          "bin_end": 831.58,
+          "count": 6030,
+          "pct": 0.49
+        },
+        {
+          "bin_start": 831.58,
+          "bin_end": 850.0,
+          "count": 1344,
+          "pct": 0.11
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 702.04,
+          "median": 694.0,
+          "std": 32.65
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 691.61,
+          "median": 684.0,
+          "std": 25.69
+        }
+      }
+    },
+    "fico_score": {
+      "name": "fico_score",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 40,
+      "stats": {
+        "mean": 697.99,
+        "std": 31.68,
+        "median": 692.0,
+        "min": 627.0,
+        "max": 847.5,
+        "q25": 672.0,
+        "q75": 712.0,
+        "iqr": 40.0,
+        "lower_fence": 612.0,
+        "upper_fence": 772.0,
+        "outlier_count": 41786,
+        "outlier_pct": 3.37,
+        "corr_with_default": -0.1309
+      },
+      "histogram": [
+        {
+          "bin_start": 627.0,
+          "bin_end": 645.38,
+          "count": 2,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 645.38,
+          "bin_end": 663.75,
+          "count": 111445,
+          "pct": 9.0
+        },
+        {
+          "bin_start": 663.75,
+          "bin_end": 682.12,
+          "count": 408462,
+          "pct": 32.98
+        },
+        {
+          "bin_start": 682.12,
+          "bin_end": 700.5,
+          "count": 238679,
+          "pct": 19.27
+        },
+        {
+          "bin_start": 700.5,
+          "bin_end": 718.88,
+          "count": 226487,
+          "pct": 18.29
+        },
+        {
+          "bin_start": 718.88,
+          "bin_end": 737.25,
+          "count": 121717,
+          "pct": 9.83
+        },
+        {
+          "bin_start": 737.25,
+          "bin_end": 755.62,
+          "count": 49803,
+          "pct": 4.02
+        },
+        {
+          "bin_start": 755.62,
+          "bin_end": 774.0,
+          "count": 40053,
+          "pct": 3.23
+        },
+        {
+          "bin_start": 774.0,
+          "bin_end": 792.38,
+          "count": 24071,
+          "pct": 1.94
+        },
+        {
+          "bin_start": 792.38,
+          "bin_end": 810.75,
+          "count": 10341,
+          "pct": 0.84
+        },
+        {
+          "bin_start": 810.75,
+          "bin_end": 829.12,
+          "count": 6030,
+          "pct": 0.49
+        },
+        {
+          "bin_start": 829.12,
+          "bin_end": 847.5,
+          "count": 1344,
+          "pct": 0.11
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 700.04,
+          "median": 692.0,
+          "std": 32.65
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 689.61,
+          "median": 682.0,
+          "std": 25.69
+        }
+      }
+    },
+    "open_acc": {
+      "name": "open_acc",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 84,
+      "stats": {
+        "mean": 11.59,
+        "std": 5.45,
+        "median": 11.0,
+        "min": 0.0,
+        "max": 90.0,
+        "q25": 8.0,
+        "q75": 14.0,
+        "iqr": 6.0,
+        "lower_fence": -1.0,
+        "upper_fence": 23.0,
+        "outlier_count": 41957,
+        "outlier_pct": 3.39,
+        "corr_with_default": 0.0303
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 7.5,
+          "count": 283341,
+          "pct": 22.88
+        },
+        {
+          "bin_start": 7.5,
+          "bin_end": 15.0,
+          "count": 655322,
+          "pct": 52.92
+        },
+        {
+          "bin_start": 15.0,
+          "bin_end": 22.5,
+          "count": 247001,
+          "pct": 19.94
+        },
+        {
+          "bin_start": 22.5,
+          "bin_end": 30.0,
+          "count": 41731,
+          "pct": 3.37
+        },
+        {
+          "bin_start": 30.0,
+          "bin_end": 37.5,
+          "count": 9028,
+          "pct": 0.73
+        },
+        {
+          "bin_start": 37.5,
+          "bin_end": 45.0,
+          "count": 1535,
+          "pct": 0.12
+        },
+        {
+          "bin_start": 45.0,
+          "bin_end": 52.5,
+          "count": 351,
+          "pct": 0.03
+        },
+        {
+          "bin_start": 52.5,
+          "bin_end": 60.0,
+          "count": 78,
+          "pct": 0.01
+        },
+        {
+          "bin_start": 60.0,
+          "bin_end": 67.5,
+          "count": 26,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 67.5,
+          "bin_end": 75.0,
+          "count": 7,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 75.0,
+          "bin_end": 82.5,
+          "count": 10,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 82.5,
+          "bin_end": 90.0,
+          "count": 4,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 11.51,
+          "median": 11.0,
+          "std": 5.4
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 11.93,
+          "median": 11.0,
+          "std": 5.63
+        }
+      }
+    },
+    "pub_rec": {
+      "name": "pub_rec",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 35,
+      "stats": {
+        "mean": 0.21,
+        "std": 0.6,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 86.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0,
+        "lower_fence": 0.0,
+        "upper_fence": 0.0,
+        "outlier_count": 206425,
+        "outlier_pct": 16.67,
+        "corr_with_default": 0.0259
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 7.17,
+          "count": 1238018,
+          "pct": 99.97
+        },
+        {
+          "bin_start": 7.17,
+          "bin_end": 14.33,
+          "count": 366,
+          "pct": 0.03
+        },
+        {
+          "bin_start": 14.33,
+          "bin_end": 21.5,
+          "count": 34,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 21.5,
+          "bin_end": 28.67,
+          "count": 6,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 28.67,
+          "bin_end": 35.83,
+          "count": 1,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 35.83,
+          "bin_end": 43.0,
+          "count": 2,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 43.0,
+          "bin_end": 50.17,
+          "count": 4,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 50.17,
+          "bin_end": 57.33,
+          "count": 1,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 57.33,
+          "bin_end": 64.5,
+          "count": 1,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 64.5,
+          "bin_end": 71.67,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 71.67,
+          "bin_end": 78.83,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 78.83,
+          "bin_end": 86.0,
+          "count": 1,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 0.2,
+          "median": 0.0,
+          "std": 0.59
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 0.24,
+          "median": 0.0,
+          "std": 0.65
+        }
+      }
+    },
+    "revol_bal": {
+      "name": "revol_bal",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 81703,
+      "stats": {
+        "mean": 16349.05,
+        "std": 22370.26,
+        "median": 11241.0,
+        "min": 0.0,
+        "max": 2904836.0,
+        "q25": 6016.0,
+        "q75": 19913.0,
+        "iqr": 13897.0,
+        "lower_fence": -14829.5,
+        "upper_fence": 40758.5,
+        "outlier_count": 72636,
+        "outlier_pct": 5.87,
+        "corr_with_default": -0.0203
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 242069.67,
+          "count": 1236842,
+          "pct": 99.87
+        },
+        {
+          "bin_start": 242069.67,
+          "bin_end": 484139.33,
+          "count": 1397,
+          "pct": 0.11
+        },
+        {
+          "bin_start": 484139.33,
+          "bin_end": 726209.0,
+          "count": 150,
+          "pct": 0.01
+        },
+        {
+          "bin_start": 726209.0,
+          "bin_end": 968278.67,
+          "count": 28,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 968278.67,
+          "bin_end": 1210348.33,
+          "count": 10,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 1210348.33,
+          "bin_end": 1452418.0,
+          "count": 1,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 1452418.0,
+          "bin_end": 1694487.67,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 1694487.67,
+          "bin_end": 1936557.33,
+          "count": 3,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 1936557.33,
+          "bin_end": 2178627.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 2178627.0,
+          "bin_end": 2420696.67,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 2420696.67,
+          "bin_end": 2662766.33,
+          "count": 2,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 2662766.33,
+          "bin_end": 2904836.0,
+          "count": 1,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 16573.29,
+          "median": 11263.0,
+          "std": 23121.31
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 15433.01,
+          "median": 11154.0,
+          "std": 18968.74
+        }
+      }
+    },
+    "revol_util": {
+      "name": "revol_util",
+      "type": "Numeric",
+      "missing_count": 736,
+      "missing_pct": 0.06,
+      "valid_count": 1237698,
+      "cardinality": 1367,
+      "stats": {
+        "mean": 52.29,
+        "std": 24.43,
+        "median": 52.8,
+        "min": 0.0,
+        "max": 892.3,
+        "q25": 34.1,
+        "q75": 71.1,
+        "iqr": 37.0,
+        "lower_fence": -21.4,
+        "upper_fence": 126.6,
+        "outlier_count": 66,
+        "outlier_pct": 0.01,
+        "corr_with_default": 0.0596
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 74.36,
+          "count": 975926,
+          "pct": 78.85
+        },
+        {
+          "bin_start": 74.36,
+          "bin_end": 148.72,
+          "count": 261754,
+          "pct": 21.15
+        },
+        {
+          "bin_start": 148.72,
+          "bin_end": 223.07,
+          "count": 16,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 223.07,
+          "bin_end": 297.43,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 297.43,
+          "bin_end": 371.79,
+          "count": 1,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 371.79,
+          "bin_end": 446.15,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 446.15,
+          "bin_end": 520.51,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 520.51,
+          "bin_end": 594.87,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 594.87,
+          "bin_end": 669.23,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 669.23,
+          "bin_end": 743.58,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 743.58,
+          "bin_end": 817.94,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 817.94,
+          "bin_end": 892.3,
+          "count": 1,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994307,
+          "mean": 51.57,
+          "median": 51.9,
+          "std": 24.53
+        },
+        "Charged Off": {
+          "count": 243391,
+          "mean": 55.23,
+          "median": 56.1,
+          "std": 23.76
+        }
+      }
+    },
+    "total_acc": {
+      "name": "total_acc",
+      "type": "Numeric",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 142,
+      "stats": {
+        "mean": 25.04,
+        "std": 11.98,
+        "median": 23.0,
+        "min": 2.0,
+        "max": 176.0,
+        "q25": 16.0,
+        "q75": 32.0,
+        "iqr": 16.0,
+        "lower_fence": -8.0,
+        "upper_fence": 56.0,
+        "outlier_count": 20721,
+        "outlier_pct": 1.67,
+        "corr_with_default": -0.0082
+      },
+      "histogram": [
+        {
+          "bin_start": 2.0,
+          "bin_end": 16.5,
+          "count": 318159,
+          "pct": 25.69
+        },
+        {
+          "bin_start": 16.5,
+          "bin_end": 31.0,
+          "count": 571073,
+          "pct": 46.11
+        },
+        {
+          "bin_start": 31.0,
+          "bin_end": 45.5,
+          "count": 274365,
+          "pct": 22.15
+        },
+        {
+          "bin_start": 45.5,
+          "bin_end": 60.0,
+          "count": 60358,
+          "pct": 4.87
+        },
+        {
+          "bin_start": 60.0,
+          "bin_end": 74.5,
+          "count": 12338,
+          "pct": 1.0
+        },
+        {
+          "bin_start": 74.5,
+          "bin_end": 89.0,
+          "count": 1608,
+          "pct": 0.13
+        },
+        {
+          "bin_start": 89.0,
+          "bin_end": 103.5,
+          "count": 414,
+          "pct": 0.03
+        },
+        {
+          "bin_start": 103.5,
+          "bin_end": 118.0,
+          "count": 80,
+          "pct": 0.01
+        },
+        {
+          "bin_start": 118.0,
+          "bin_end": 132.5,
+          "count": 21,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 132.5,
+          "bin_end": 147.0,
+          "count": 11,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 147.0,
+          "bin_end": 161.5,
+          "count": 3,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 161.5,
+          "bin_end": 176.0,
+          "count": 4,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994890,
+          "mean": 25.09,
+          "median": 23.0,
+          "std": 11.95
+        },
+        "Charged Off": {
+          "count": 243544,
+          "mean": 24.85,
+          "median": 23.0,
+          "std": 12.12
+        }
+      }
+    },
+    "mort_acc": {
+      "name": "mort_acc",
+      "type": "Numeric",
+      "missing_count": 47281,
+      "missing_pct": 3.82,
+      "valid_count": 1191153,
+      "cardinality": 39,
+      "stats": {
+        "mean": 1.68,
+        "std": 2.02,
+        "median": 1.0,
+        "min": 0.0,
+        "max": 51.0,
+        "q25": 0.0,
+        "q75": 3.0,
+        "iqr": 3.0,
+        "lower_fence": -4.5,
+        "upper_fence": 7.5,
+        "outlier_count": 16879,
+        "outlier_pct": 1.42,
+        "corr_with_default": -0.073
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 4.25,
+          "count": 1073945,
+          "pct": 90.16
+        },
+        {
+          "bin_start": 4.25,
+          "bin_end": 8.5,
+          "count": 108275,
+          "pct": 9.09
+        },
+        {
+          "bin_start": 8.5,
+          "bin_end": 12.75,
+          "count": 7909,
+          "pct": 0.66
+        },
+        {
+          "bin_start": 12.75,
+          "bin_end": 17.0,
+          "count": 778,
+          "pct": 0.07
+        },
+        {
+          "bin_start": 17.0,
+          "bin_end": 21.25,
+          "count": 165,
+          "pct": 0.01
+        },
+        {
+          "bin_start": 21.25,
+          "bin_end": 25.5,
+          "count": 46,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 25.5,
+          "bin_end": 29.75,
+          "count": 20,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 29.75,
+          "bin_end": 34.0,
+          "count": 6,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 34.0,
+          "bin_end": 38.25,
+          "count": 7,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 38.25,
+          "bin_end": 42.5,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 42.5,
+          "bin_end": 46.75,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 46.75,
+          "bin_end": 51.0,
+          "count": 2,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 954495,
+          "mean": 1.76,
+          "median": 1.0,
+          "std": 2.05
+        },
+        "Charged Off": {
+          "count": 236658,
+          "mean": 1.39,
+          "median": 1.0,
+          "std": 1.84
+        }
+      }
+    },
+    "pub_rec_bankruptcies": {
+      "name": "pub_rec_bankruptcies",
+      "type": "Numeric",
+      "missing_count": 697,
+      "missing_pct": 0.06,
+      "valid_count": 1237737,
+      "cardinality": 12,
+      "stats": {
+        "mean": 0.13,
+        "std": 0.38,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 12.0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0,
+        "lower_fence": 0.0,
+        "upper_fence": 0.0,
+        "outlier_count": 151294,
+        "outlier_pct": 12.22,
+        "corr_with_default": 0.0257
+      },
+      "histogram": [
+        {
+          "bin_start": 0.0,
+          "bin_end": 1.0,
+          "count": 1086443,
+          "pct": 87.78
+        },
+        {
+          "bin_start": 1.0,
+          "bin_end": 2.0,
+          "count": 142162,
+          "pct": 11.49
+        },
+        {
+          "bin_start": 2.0,
+          "bin_end": 3.0,
+          "count": 7123,
+          "pct": 0.58
+        },
+        {
+          "bin_start": 3.0,
+          "bin_end": 4.0,
+          "count": 1440,
+          "pct": 0.12
+        },
+        {
+          "bin_start": 4.0,
+          "bin_end": 5.0,
+          "count": 367,
+          "pct": 0.03
+        },
+        {
+          "bin_start": 5.0,
+          "bin_end": 6.0,
+          "count": 130,
+          "pct": 0.01
+        },
+        {
+          "bin_start": 6.0,
+          "bin_end": 7.0,
+          "count": 45,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 7.0,
+          "bin_end": 8.0,
+          "count": 14,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 8.0,
+          "bin_end": 9.0,
+          "count": 8,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 9.0,
+          "bin_end": 10.0,
+          "count": 3,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 10.0,
+          "bin_end": 11.0,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "bin_start": 11.0,
+          "bin_end": 12.0,
+          "count": 2,
+          "pct": 0.0
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "count": 994311,
+          "mean": 0.13,
+          "median": 0.0,
+          "std": 0.37
+        },
+        "Charged Off": {
+          "count": 243426,
+          "mean": 0.15,
+          "median": 0.0,
+          "std": 0.4
+        }
+      }
+    },
+    "loan_status": {
+      "name": "loan_status",
+      "type": "Categorical",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "valid_count": 1238434,
+      "cardinality": 2,
+      "stats": {
+        "top_value": "Fully Paid",
+        "top_count": 994890,
+        "top_pct": 80.33,
+        "unique_categories": 2
+      },
+      "categories": [
+        {
+          "category": "Fully Paid",
+          "count": 994890,
+          "pct": 80.33
+        },
+        {
+          "category": "Charged Off",
+          "count": 243544,
+          "pct": 19.67
+        }
+      ],
+      "target_breakdown": {
+        "Fully Paid": {
+          "fully_paid": 994890,
+          "charged_off": 0,
+          "default_rate_pct": 0.0
+        },
+        "Charged Off": {
+          "fully_paid": 0,
+          "charged_off": 243544,
+          "default_rate_pct": 100.0
+        }
+      }
+    }
+  }
+}
